@@ -1,0 +1,57 @@
+{% extends "admin_layout.html" %}
+
+{% block title %} | Add Reservation{% endblock %}
+
+{% block main %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2>Add Reservation</h2>
+</div>
+
+<div class="row justify-content-center">
+    <div class="col-12 col-md-6">
+
+        <form class="booking-form" action="/reservations" method="GET">
+            <div class="mb-3">
+                <label class="form-label">Full Name</label>
+                <input type="text" class="form-control" name="fullname" placeholder="Enter guest name" required>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Contact Number</label>
+                <input type="text" class="form-control" name="contact" placeholder="09XXXXXXXXX" required>
+            </div>
+
+            <div class="row">
+                <div class="mb-3">
+                    <label class="form-label">Check-in Date</label>
+                    <input type="date" class="form-control" name="checkin" required>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Number of Guests</label>
+                <input type="number" class="form-control" name="guests" min="1" placeholder="e.g. 2" required>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Cottage Type</label>
+                <select class="form-select" name="cottage" required>
+                    <option selected disabled>Select an option</option>
+                    <option>None</option>
+                    <option>Small Cottage - 10 Pax</option>
+                    <option>Big Cottage - 15 Pax</option>
+                    <option>Large Cottage - 25 Pax</option>
+                    <option>Table with Umbrella</option>
+                </select>
+            </div>
+
+            <div class="text-center">
+                <a href="/reservations" class="btn btn-secondary">Cancel</a>
+                <button type="submit" class="btn submit-btn px-4">
+                    Save Reservation
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

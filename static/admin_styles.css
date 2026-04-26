@@ -1,0 +1,98 @@
+/* ADMIN LAYOUT */
+/** {
+    border: 1px solid red;
+}*/
+
+:root {
+    --primary-color: #1c398e;
+    --secondary-color: #6c757d;
+    --background-color: #f8f9fa;
+    --active-color: #0079C2;
+    --muted-color: #a3abbd;
+    --header-text: #101828;
+    --body-text: #606a80;
+}
+
+.admin-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.admin-sidebar {
+    width: 220px;
+    background: #ffffff;
+    border-right: 1px solid #E3E7ED;
+    padding: 20px;
+}
+
+.admin-sidebar .nav-link {
+    color: #333;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    padding: 8px 10px;
+}
+
+.admin-sidebar .nav-link.active {
+    background-color: rgba(79, 124, 172, 0.1);
+    color: #4F7CAC;
+    font-weight: 600;
+}
+
+/* Content */
+.admin-content {
+    flex: 1;
+    padding: 30px;
+    background-color: #F5F7F9;
+}
+
+/* Stat cards */
+.stat-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #E3E7ED;
+}
+
+.stat-number {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* ======= Chart placeholder ============== */
+.chart-placeholder {
+    height: 200px;
+    gap: 10px;
+}
+
+.bar {
+    flex: 1;
+    background-color: #4F7CAC;
+    border-radius: 4px;
+}
+ /* Dashboard Table */
+.table-container {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.table thead th {
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 1;
+}
+
+.submit-btn{
+    background-color: var(--primary-color) !important;
+    color: var(--background-color) !important;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 1px solid var(--primary-color) !important;
+}
+
+.submit-btn:hover, .submit-btn:active{
+    background-color: var(--background-color) !important;
+    color: var(--primary-color) !important;
+}

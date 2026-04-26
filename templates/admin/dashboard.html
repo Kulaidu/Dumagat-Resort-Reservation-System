@@ -1,0 +1,105 @@
+{% extends "admin_layout.html" %}
+
+{% block title %} | Dashboard{% endblock %}
+
+{% block main %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2>Dashboard</h2>
+</div>
+
+<!-- Stat Card -->
+<div class="row g-4 mb-4">
+    <div class="col-12 col-md-4">
+        <div class="stat-card">
+            <h6>Reservations Today</h6>
+            <p class="stat-number">0</p>
+        </div>
+    </div>
+
+    <div class="col-12 col-md-4">
+        <div class="stat-card">
+            <h6>Reservations This Month</h6>
+            <p class="stat-number">0</p>
+        </div>
+    </div>
+
+    <div class="col-12 col-md-4">
+        <div class="stat-card">
+            <h6>Reservations This Year</h6>
+            <p class="stat-number">0</p>
+        </div>
+    </div>
+</div>
+
+<div class="card mb-4">
+    <div class="card-body">
+
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h5 class="mb-0">Reservations This Month</h5>
+
+            <input 
+                type="text" 
+                class="form-control w-auto" 
+                placeholder="Search..."
+            >
+        </div>
+
+        <div class="table-container">
+            <div class="table-responsive">
+                <table class="table table-bordered align-middle table-hover table-sm">
+
+                    <thead class="table-light">
+                        <tr>
+                            <th>Name</th>
+                            <th>Contact</th>
+                            <th>Check-in Date</th>
+                            <th>Guests</th>
+                            <th>Cottage</th>
+                        </tr>
+                    </thead>
+
+                    <tbody class="table-group-divider">
+                        <!-- Placeholder -->
+                        <tr>
+                            <td>Juan Dela Cruz</td>
+                            <td>09123456789</td>
+                            <td>2026-05-10</td>
+                            <td>5</td>
+                            <td>Small Cottage</td>
+                        </tr>
+
+                        <tr>
+                            <td>Maria Santos</td>
+                            <td>09198765432</td>
+                            <td>2026-05-12</td>
+                            <td>10</td>
+                            <td>Big Cottage</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Chart -->
+<div class="card">
+    <div class="card-body">
+
+        <h5 class="mb-3">Total Reservations This Year</h5>
+
+        <!-- Placeholder -->
+        <div class="chart-placeholder d-flex align-items-end justify-content-between">
+
+            <div class="bar" style="height: 40%"></div>
+            <div class="bar" style="height: 60%"></div>
+            <div class="bar" style="height: 30%"></div>
+            <div class="bar" style="height: 80%"></div>
+            <div class="bar" style="height: 50%"></div>
+            <div class="bar" style="height: 70%"></div>
+
+        </div>
+
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,85 @@
+{% extends "layout.html" %}
+
+{% block title %} | Home{% endblock %}
+
+{% block main %}
+<section class="hero d-flex align-items-center justify-content-center text-center">
+    <div class="hero-content">
+        <h1 class="hero-title">Your Tropical Paradise Awaits</h1>
+        <p class="hero-text">Experience luxury and tranquility at Dumagat Resort. Crystal clear waters, and unforgettable memories.</p>
+        <a href="/reserve" class="btn hero-btn mt-3">Book Your Stay</a>
+    </div>
+</section>
+<section class="features-section py-5">
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <h2 class="features-title">Why Choose MWAdventure Park</h2>
+        </div>
+
+        <div class="row text-center g-4">
+
+            <div class="col-12 col-md-4">
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper">
+                        <img class="feature-icon-img" src="{{ url_for('static', filename='images/mountain.png') }}" alt="Mountain">
+                    </div>
+                    <h5>Nature View</h5>
+                    <p>Enjoy breathtaking river and mountain scenery.</p>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper">
+                        <img class="feature-icon-img" src="{{ url_for('static', filename='images/wave.png') }}" alt="Wave">
+                    </div>
+                    <h5>Swimming Area</h5>
+                    <p>Relax and swim in our clean, natural waters.</p>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper">
+                        <img class="feature-icon-img" src="{{ url_for('static', filename='images/cabin.png') }}" alt="Cabin">
+                    </div>
+                    <h5>Cottage Rentals</h5>
+                    <p>Comfortable cottages perfect for families and group stays.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<section class="image-feature-section py-5">
+    <div class="container">
+        <div class="row g-3">
+            <div class="col-12 col-md-4">
+                <div class="image-card">
+                    <img src="{{ url_for('static', filename='images/feature1.jpg') }}" alt="Feature 1" class="img-fluid rounded">
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <div class="image-card">
+                    <img src="{{ url_for('static', filename='images/feature2.jpg') }}" alt="Feature 2" class="img-fluid rounded">
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <div class="image-card">
+                    <img src="{{ url_for('static', filename='images/feature3.jpg') }}" alt="Feature 3" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="cta">
+    <div class="container text-center">
+        <h2>Ready for Paradise?</h2>
+        <p>Book your dream vacation today and experience the ultimate getaway</p>
+        <a href="/reserve" class="btn cta-btn mt-3">Book Your Stay</a>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,112 @@
+{% extends "admin_layout.html" %}
+
+{% block title %} | Profile{% endblock %}
+
+{% block main %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2>Profile</h2>
+</div>
+
+<div class="row g-4">
+
+    <!-- PROFILE INFO -->
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+
+                <h5 class="mb-3">Account Information</h5>
+
+                <p><strong>Name:</strong> Admin Name</p>
+                <p><strong>Username:</strong> admin123</p>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- CHANGE USERNAME -->
+    <div class="col-12 col-md-6">
+        <div class="card">
+            <div class="card-body">
+
+                <h5 class="mb-3">Change Username</h5>
+
+                <form action="#">
+
+                    <div class="mb-3">
+                        <label class="form-label">New Username</label>
+                        <input type="text" name="username" class="form-control" required>
+                    </div>
+
+                    <div class="d-flex justify-content-end">
+                        <button type="button" class="btn submit-btn" data-bs-toggle="modal" data-bs-target="#successModal">
+                            Update Username
+                        </button>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- CHANGE PASSWORD -->
+    <div class="col-12 col-md-6">
+        <div class="card">
+            <div class="card-body">
+
+                <h5 class="mb-3">Change Password</h5>
+
+                <form action="#">
+
+                    <div class="mb-3">
+                        <label class="form-label">Current Password</label>
+                        <input type="password" name="current_password" class="form-control" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">New Password</label>
+                        <input type="password" name="new_password" class="form-control" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Confirm New Password</label>
+                        <input type="password" name="confirm_password" class="form-control" required>
+                    </div>
+
+                    <div class="d-flex justify-content-end">
+                        <button type="submit" class="btn submit-btn" data-bs-toggle="modal" data-bs-target="#successModal"">
+                            Update Password
+                        </button>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- SUCCESS MODAL -->
+<div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title">Success</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+                Changes saved successfully!
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn submit-btn" data-bs-dismiss="modal">
+                    OK
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

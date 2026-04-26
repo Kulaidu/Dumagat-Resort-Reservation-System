@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+{% block title %} | Reserve{% endblock %}
+
+{% block main %}
+<section class="booking-section py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2>Make a Reservation</h2>
+            <p class="text-muted">Fill in the details below to book your stay</p>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6">
+
+                <form class="booking-form" action="/success" method="GET">
+                    <div class="mb-3">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-control" name="fullname" placeholder="Enter your name" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Contact Number</label>
+                        <input type="text" class="form-control" name="contact" placeholder="09XXXXXXXXX" required>
+                    </div>
+
+                    <div class="row">
+                        <div class="mb-3">
+                            <label class="form-label">Check-in Date</label>
+                            <input type="date" class="form-control" name="checkin" required>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Number of Guests</label>
+                        <input type="number" class="form-control" name="guests" min="1" placeholder="e.g. 2" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Cottage Type</label>
+                        <select class="form-select" name="cottage"required>
+                            <option selected disabled>Select an option</option>
+                            <option>None</option>
+                            <option>Small Cottage - 10 Pax</option>
+                            <option>Big Cottage - 15 Pax</option>
+                            <option>Large Cottage - 25 Pax</option>
+                            <option>Table with Umbrella</option>
+                        </select>
+                    </div>
+
+                    <div class="text-center">
+                        <button type="submit" class="btn submit-btn px-4">
+                            Submit Reservation
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
